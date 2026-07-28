@@ -1,7 +1,7 @@
 # Implementation Report — Feature: evidence-first-profile
 
 **Branch:** `feature/evidence-first-profile`  
-**Date:** 2025-05-10  
+**Date:** 2026-07-28  
 **Status:** Ready for PR review
 
 ---
