@@ -14,7 +14,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <div class="avatar-mini" aria-hidden="true">
+        <div class="logo-circle">
           <img src="https://github.com/shubhojit82.png" alt="Shubhojit Chowdhury" />
         </div>
         <div class="brand-text">
@@ -23,12 +23,21 @@
         </div>
       </div>
 
-      <nav class="top-nav">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a class="btn" href="#contact">Email</a>
-      </nav>
+      <div class="nav-wrap">
+        <nav class="top-nav">
+          <a href="#">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="search-btn" aria-label="Search">🔍</button>
+          <a class="btn book" href="#contact">Book a Meeting</a>
+          <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -80,14 +89,43 @@
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      © <span id="year"></span> Shubhojit Chowdhury — <a href="mailto:shubhojit.chowdhury@gmail.com">shubhojit.chowdhury@gmail.com</a>
+  <footer class="site-footer footer-modern">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4>About</h4>
+        <p>Applied AI researcher and platform engineering leader. Building production ML systems, deployment pipelines, and observability.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick links</h4>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><a href="mailto:shubhojit.chowdhury@gmail.com">shubhojit.chowdhury@gmail.com</a></p>
+        <p><a href="https://github.com/shubhojit82">github.com/shubhojit82</a></p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Shubhojit Chowdhury — Built with focus on reliability and scale.</small>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', function(){
+      var toggle = document.querySelector('.mobile-toggle');
+      var nav = document.querySelector('.top-nav');
+      toggle && toggle.addEventListener('click', function(){
+        nav.classList.toggle('open');
+      });
+    });
   </script>
 </body>
 </html>
