@@ -30,7 +30,7 @@ React • Node.js • Python • Docker • Kubernetes • AWS • PostgreSQL �
 ## Selected projects
 
 - [AIAssistant](https://github.com/shubhojit82/AIAssistant) — Personal AI assistant and automation toolkit (Python). Integrates conversational NLP components and automates common workflows and prototypes.
-- [edge-delivery](https://github.com/shubhojit82/edge-delivery) — Edge delivery tooling and pipeline (JavaScript). Fast client‑side delivery patterns and performance-focused deployment helpers.
+- [edge-delivery](https://github.com/shubhojit82/edge-delivery) — Edge delivery tooling and pipeline (JavaScript). Fast client‑side delivery patterns and performance‑focused deployment helpers.
 - [optimum](https://github.com/shubhojit82/optimum) — Utilities and examples for performance and optimization (JavaScript). Helpful for benchmarking and improving client/server performance.
 
 If any of these descriptions need tweaks or you want different repos highlighted, tell me which ones and I'll update the summaries.
@@ -38,13 +38,18 @@ If any of these descriptions need tweaks or you want different repos highlighted
 ## Get in touch
 
 - GitHub: [@shubhojit82](https://github.com/shubhojit82)
-- LinkedIn: (add your LinkedIn URL here)
-- Email: (add your preferred contact email here)
+- LinkedIn: https://www.linkedin.com/in/shubhojitchowdhury
+- Email: shubhojit.chowdhury@gmail.com
 
 ---
 
 ## GitHub Pages & portfolio
 
-I can add a responsive, professional portfolio for you (like the sample you shared) and commit it to this repo under `/docs` so you can enable GitHub Pages from Settings → Pages → Source: main branch /docs.
+I added a responsive portfolio site under `/docs` in this repository. To publish it as a GitHub Pages site:
 
-If you want that, say “add portfolio to /docs” and I’ll commit index.html, styles.css, script.js and a small images/ folder. I can auto-fill the portfolio with the three projects above and use your GitHub avatar.
+1. Go to this repo → Settings → Pages.
+2. Under "Source", select: Branch = `main`, Folder = `/docs`, then Save.
+3. Wait ~1–5 minutes; the site will be served at:
+   https://shubhojit82.github.io/shubhojit82
+
+If you want a downloadable resume added, paste a URL for your resume PDF and I will commit it to `/docs` and add a download link to the site.
