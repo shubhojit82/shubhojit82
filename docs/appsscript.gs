@@ -25,7 +25,7 @@
 /* ── CONFIG ────────────────────────────────────────────────── */
 var CONFIG = {
   // Google Sheet ID — from the URL: docs.google.com/spreadsheets/d/SHEET_ID/edit
-  SHEET_ID: 'REPLACE_WITH_YOUR_GOOGLE_SHEET_ID',
+  SHEET_ID: '1Iv_JlRjU300CjozWPhDBiTqVOz_2Facd8EsCX7dU9Ug',
 
   // Sheet tab name (default: first sheet)
   SHEET_NAME: 'Bookings',

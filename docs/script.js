@@ -19,7 +19,7 @@
 
   /* ── CONFIG ─────────────────────────────────────────────── */
   // TODO: Replace with your deployed Google Apps Script Web App URL
-  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec';
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZ7YX4CmY0Asljd812V0kp55-i9Oh3NVSlyzOF5dgsMxr1RjgpwBq1S-9hNh1NJVMAJg/exec';
 
   /* ── Year ───────────────────────────────────────────────── */
   var yearEl = document.getElementById('year');
