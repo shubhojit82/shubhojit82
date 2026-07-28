@@ -1,27 +1,49 @@
 {
-  "_meta": "Recognition, awards, judging, and professional memberships. Add evidence_url when certificates are available publicly.",
+  "_meta": "Recognition, awards, judging, and professional memberships. Evidence_url fields will be populated when public links are confirmed.",
   "awards": [
     {
-      "id": "ibm-top-contributor",
-      "title": "IBM GBS GD Top Contributor Award",
-      "org": "IBM Consulting",
-      "year": "[YEAR — PLACEHOLDER: confirm year from award letter]",
+      "id": "albertsons-client-award",
+      "title": "Mid-Atlantic Client Recognition Award",
+      "org": "Albertsons Companies — ACME · Kings · Balducci's · Safeway",
+      "year": "September 2022",
       "category": "client",
-      "status": "Certificate available",
-      "description": "Recognized for outstanding client delivery excellence across Fortune 500 enterprise programs.",
-      "evidence": "[PLACEHOLDER: add Credly or IBM internal badge URL]",
-      "tags": ["IBM", "Client Delivery", "Excellence"]
+      "status": "Certificate available · Physical certificate presented by client leadership",
+      "description": "Presented in appreciation of dedication and technical expertise in the launch of the App, Loyalty platform and eCommerce in Kings and Balducci's stores. Signed by SVP President, VP General Manager, VP Operations, and other senior Albertsons leadership.",
+      "evidence": "Physical certificate — held privately",
+      "tags": ["Client Award", "Loyalty Platform", "eCommerce Launch", "App Delivery"]
     },
     {
-      "id": "ibm-eminence",
-      "title": "IBM Eminence & Excellence Recognition",
-      "org": "IBM Consulting",
-      "year": "[YEAR — PLACEHOLDER: confirm year]",
-      "category": "client",
-      "status": "Certificate available",
-      "description": "Eminence & Excellence recognition for enterprise architecture leadership and client impact.",
-      "evidence": "[PLACEHOLDER]",
-      "tags": ["IBM", "Architecture", "Eminence"]
+      "id": "ibm-gbs-eminence",
+      "title": "GBS-GD Eminence & Excellence Recognition",
+      "org": "IBM GBS – Global Delivery",
+      "year": "2012–2014 era",
+      "category": "employer",
+      "status": "Certificate available · Signed by GM Global Delivery India",
+      "description": "Recognized for significant contribution to Husqvarna's Dealer Dashboard & eCommerce project. Signed by Manager GBS-GD and General Manager Global Delivery India (Suhas Bhide).",
+      "evidence": "Official IBM certificate — held privately",
+      "tags": ["IBM Award", "eCommerce", "Husqvarna", "Dealer Dashboard"]
+    },
+    {
+      "id": "ibm-gic-tca",
+      "title": "GIC Onsite Assignee — Top Contributor Award (TCA)",
+      "org": "IBM GBS GD · GIC Onsite",
+      "year": "For Year 2013",
+      "category": "employer",
+      "status": "Official letter available · Signed by two General Managers",
+      "description": "Recognized as one of the Top Contributors for commendable performance and contribution to the success of the organization and value added to clients in 2013. Signed by GM Global Delivery India and GM Globally Integrated Capabilities (Joanne Collins-Smee).",
+      "evidence": "Official IBM letter — held privately",
+      "tags": ["IBM Award", "Top Contributor", "GIC Onsite", "2013"]
+    },
+    {
+      "id": "mindtree-hats-off-moma",
+      "title": "Mindtree Hats Off Award — MoMA E-Commerce Search Transformation",
+      "org": "Mindtree US Practice",
+      "year": "May 2016",
+      "category": "employer",
+      "status": "Certificate available · Client publicly named · Authorized résumé",
+      "description": "Received the Mindtree Hats Off Award in May 2016 for contributions to the Nextopia search integration for the MoMA online store. The award citation recognized the work for 'extraordinary results.'",
+      "evidence": "Award certificate — held privately",
+      "tags": ["Mindtree Award", "MoMA NY", "eCommerce Search", "Nextopia"]
     },
     {
       "id": "claro-judge-2026",
@@ -29,9 +51,9 @@
       "org": "Claro Awards · Industry Body",
       "year": "2026",
       "category": "industry",
-      "status": "Invitation accepted · Evaluation in progress",
-      "description": "Invited to serve as a judge for the 2026 Claro Awards for Technology Excellence, recognizing outstanding innovation across the US technology industry.",
-      "evidence": "[LinkedIn post — 45 reactions]",
+      "status": "Evaluation in progress",
+      "description": "Invited to serve as a judge for the 2026 Claro Awards for Technology Excellence, recognizing outstanding innovation across the US technology industry. Invitation accepted.",
+      "evidence": "LinkedIn post · 45 reactions",
       "tags": ["Industry Judge", "Tech Excellence", "US Industry"]
     },
     {
@@ -41,8 +63,8 @@
       "year": "Active",
       "category": "certification",
       "status": "Publicly verifiable via Adobe credentials",
-      "description": "Adobe Certified Master — Experience Manager and Experience Cloud. 25+ Credly badges.",
-      "evidence": "[PLACEHOLDER: add Credly profile URL]",
+      "description": "Adobe Certified Master designation across Experience Manager and Experience Cloud platforms. 25+ individual Credly badges.",
+      "evidence": "Adobe credentials profile — publicly verifiable",
       "tags": ["Adobe", "Certified Master", "AEM", "25+ Badges"]
     },
     {
@@ -53,19 +75,9 @@
       "category": "membership",
       "status": "Certificate available · Credly badge verified",
       "description": "Active member of the IEEE, the world's largest technical professional organization. 1-Year Milestone badge issued via Credly.",
-      "evidence": "[PLACEHOLDER: add Credly badge URL]",
+      "evidence": "Credly badge — publicly verifiable",
+      "note": "Member number withheld from public pages per privacy practice",
       "tags": ["IEEE", "Active Member", "1-Year Milestone"]
-    },
-    {
-      "id": "moma-recognition",
-      "title": "MoMA Digital Transformation — Project Architect",
-      "org": "MoMA / IBM Consulting",
-      "year": "[YEAR — PLACEHOLDER: confirm year]",
-      "category": "client",
-      "status": "Verified · Client publicly named · Authorized résumé",
-      "description": "Recognized as project architect for MoMA digital transformation engagement.",
-      "evidence": "[PLACEHOLDER]",
-      "tags": ["MoMA", "Digital Transformation", "Client Recognition"]
     }
   ]
 }
