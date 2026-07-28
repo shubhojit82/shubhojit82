@@ -29,13 +29,11 @@ React • Node.js • Python • Docker • Kubernetes • AWS • PostgreSQL �
 
 ## Selected projects
 
-> I used the repository description and profile information to create this profile; please replace the placeholders below with links and short descriptions for each project you want highlighted.
+- [AIAssistant](https://github.com/shubhojit82/AIAssistant) — Personal AI assistant and automation toolkit (Python). Integrates conversational NLP components and automates common workflows and prototypes.
+- [edge-delivery](https://github.com/shubhojit82/edge-delivery) — Edge delivery tooling and pipeline (JavaScript). Fast client‑side delivery patterns and performance-focused deployment helpers.
+- [optimum](https://github.com/shubhojit82/optimum) — Utilities and examples for performance and optimization (JavaScript). Helpful for benchmarking and improving client/server performance.
 
-- [Project One — placeholder](https://github.com/shubhojit82) — Short one‑liner describing impact, tech, and scale.
-- [Project Two — placeholder](https://github.com/shubhojit82) — Short one‑liner describing impact, tech, and scale.
-- [Project Three — placeholder](https://github.com/shubhojit82) — Short one‑liner describing impact, tech, and scale.
-
-If you'd like, I can fetch your top public repos and draft the descriptions for you — say “auto-fill projects” and I’ll pull the 3 most starred repos and write concise summaries.
+If any of these descriptions need tweaks or you want different repos highlighted, tell me which ones and I'll update the summaries.
 
 ## Get in touch
 
@@ -47,15 +45,6 @@ If you'd like, I can fetch your top public repos and draft the descriptions for 
 
 ## GitHub Pages & portfolio
 
-If you want a responsive portfolio site (like the sample you shared) I can:
+I can add a responsive, professional portfolio for you (like the sample you shared) and commit it to this repo under `/docs` so you can enable GitHub Pages from Settings → Pages → Source: main branch /docs.
 
-1. Create the repository `shubhojit82.github.io` and commit a responsive, modern portfolio (HTML/CSS/JS).
-2. Or add the site to this repo and enable GitHub Pages from the `main` branch `/docs` folder.
-
-Tell me which option you prefer and provide:
-- 1–3 project links with a 1‑line description each (or say “auto-fill”),
-- an avatar image URL (or I’ll use your GitHub avatar),
-- optional preferred accent color (hex),
-- and whether to include a downloadable resume (upload to the repo or provide a link).
-
-Once you confirm I will commit the portfolio files and enable Pages for the chosen repository.
+If you want that, say “add portfolio to /docs” and I’ll commit index.html, styles.css, script.js and a small images/ folder. I can auto-fill the portfolio with the three projects above and use your GitHub avatar.
