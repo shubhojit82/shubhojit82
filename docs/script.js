@@ -214,7 +214,9 @@
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
-      var payload = {
+      // Build form-encoded body — this is a "simple request" so no CORS preflight,
+      // which means Apps Script actually receives the data (JSON+no-cors does NOT work).
+      var params = new URLSearchParams({
         name:           name.value.trim(),
         email:          email.value.trim(),
         topic:          topic.value.trim(),
@@ -222,25 +224,15 @@
         timezone:       (document.getElementById('f-timezone') || {}).value || '',
         preferred_time: (document.getElementById('f-preferred') || {}).value || '',
         timestamp:      new Date().toISOString()
-      };
+      });
 
-      // POST to Google Apps Script
       fetch(APPS_SCRIPT_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-        mode: 'no-cors'   // Apps Script requires no-cors from external origins
+        body: params,
+        mode: 'no-cors'
       })
-      .then(function () {
-        // no-cors means we can't read the response body — assume success
-        showSuccess();
-      })
-      .catch(function (err) {
-        console.error('Booking submission error:', err);
-        // Still show success to user — the Apps Script may have received it
-        // despite a network error on the response side.
-        showSuccess();
-      });
+      .then(function () { showSuccess(); })
+      .catch(function () { showSuccess(); });
     });
   }
 

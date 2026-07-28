@@ -53,7 +53,17 @@ function doGet(e) {
  */
 function doPost(e) {
   try {
-    var data = JSON.parse(e.postData.contents);
+    // Receive as form-encoded fields (e.parameter) — works with no-cors from static sites.
+    // JSON + no-cors is blocked by CORS preflight and never reaches here.
+    var data = {
+      name:           e.parameter.name           || '',
+      email:          e.parameter.email          || '',
+      topic:          e.parameter.topic          || '',
+      service:        e.parameter.service        || '',
+      timezone:       e.parameter.timezone       || '',
+      preferred_time: e.parameter.preferred_time || '',
+      timestamp:      e.parameter.timestamp      || new Date().toISOString()
+    };
     appendToSheet(data);
     sendNotificationEmail(data);
     return ContentService
