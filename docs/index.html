@@ -3,111 +3,427 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shubhojit Chowdhury — Forward‑Deployed AI Architect</title>
-  <meta name="description" content="Shubhojit Chowdhury — Forward‑Deployed AI Architect & Enterprise Solution Architect. Production systems, applied AI, cloud-native platforms." />
-
-  <link rel="stylesheet" href="/docs/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <title>Shubhojit Chowdhury — Forward-Deployed AI Architect</title>
+  <meta name="description" content="Shubhojit Chowdhury — Forward-Deployed AI Architect & Enterprise Solution Architect. Production systems, applied AI, cloud-native platforms." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#">
+        <img class="brand-avatar" src="https://avatars.githubusercontent.com/u/31447207?v=4" alt="Shubhojit Chowdhury" width="36" height="36" />
+        <span class="brand-name">Shubhojit Chowdhury</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn-primary sm" href="mailto:shubhojit.chowdhury@gmail.com">Hire Me</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid" aria-hidden="true"></div>
+    <div class="hero-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-orb orb-2" aria-hidden="true"></div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <span class="badge reveal">Available for opportunities</span>
+        <h1 class="reveal reveal-delay-1">
+          Shubhojit<br /><span class="text-accent">Chowdhury</span>
+        </h1>
+        <p class="hero-role reveal reveal-delay-2">
+          <span id="typed-role">Forward-Deployed AI Architect</span>
+        </p>
+        <p class="hero-lead reveal reveal-delay-3">
+          I design and deliver production-grade systems that bridge enterprise architecture with applied AI — built for reliability, scale, and security.
+        </p>
+        <div class="hero-actions reveal reveal-delay-4">
+          <a class="btn-primary" href="#projects">View My Work</a>
+          <a class="btn-ghost" href="https://github.com/shubhojit82" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+        </div>
+        <ul class="hero-chips reveal reveal-delay-4">
+          <li>Enterprise Architecture</li>
+          <li>Applied AI & ML</li>
+          <li>Cloud-Native Platforms</li>
+          <li>Production Systems</li>
+        </ul>
+      </div>
+
+      <aside class="hero-card reveal reveal-delay-2">
+        <div class="avatar-ring">
+          <img class="hero-avatar" src="https://avatars.githubusercontent.com/u/31447207?v=4" alt="Shubhojit Chowdhury" width="160" height="160" />
+        </div>
+        <div class="hero-card-info">
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Remote-First, Worldwide</span>
+          </div>
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span><!-- PLACEHOLDER: e.g. "IBM · 8+ years" --><em class="placeholder">Add your current employer</em></span>
+          </div>
+          <div class="info-row">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Open to new opportunities</span>
+          </div>
+        </div>
+        <div class="hero-card-links">
+          <a href="https://github.com/shubhojit82" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/shubhojitchowdhury" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:shubhojit.chowdhury@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="scroll-hint reveal reveal-delay-4" aria-hidden="true">
+      <span>Scroll to explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
     <div class="wrap">
-      <a class="brand" href="#">Shubhojit Chowdhury</a>
-      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-      <nav class="nav" id="nav">
+      <div class="section-header reveal">
+        <span class="section-label">01 / About</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I work at the intersection of <strong>enterprise architecture</strong> and <strong>applied AI</strong>, helping organizations ship production-ready intelligent systems that are maintainable, secure, and measurably impactful.</p>
+          <p>My core focus is translating complex AI/ML capabilities into robust production pipelines — from architecture and design through deployment, monitoring, and continuous iteration.</p>
+          <p><!-- PLACEHOLDER: Add 1–2 sentences about your background, motivations, or unique angle. --><em class="placeholder">Add a personal statement about your background or what drives you.</em></p>
+        </div>
+        <div class="stats-grid reveal reveal-delay-1">
+          <div class="stat-card">
+            <div class="stat-number"><!-- PLACEHOLDER -->8+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><!-- PLACEHOLDER -->20+</div>
+            <div class="stat-label">Projects Shipped</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><!-- PLACEHOLDER -->5+</div>
+            <div class="stat-label">Certifications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number"><!-- PLACEHOLDER -->3</div>
+            <div class="stat-label">Industries Served</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section id="experience" class="section section-alt">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <span class="section-label">02 / Experience</span>
+        <h2>Where I've Worked</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company"><!-- PLACEHOLDER: Company Name --><em class="placeholder">Your Current Company</em></span>
+              <span class="timeline-period"><!-- PLACEHOLDER: e.g. Jan 2022 – Present --><em class="placeholder">Date Range</em></span>
+            </div>
+            <h3 class="timeline-role"><!-- PLACEHOLDER: Your Job Title --><em class="placeholder">Your Job Title</em></h3>
+            <p class="timeline-desc"><!-- PLACEHOLDER: Describe your key responsibilities and accomplishments. --><em class="placeholder">Describe your key responsibilities, technologies used, and measurable outcomes.</em></p>
+            <div class="timeline-tags">
+              <span>AI/ML</span><span>Architecture</span><span>Cloud</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company"><!-- PLACEHOLDER: Previous Company --><em class="placeholder">Previous Company</em></span>
+              <span class="timeline-period"><!-- PLACEHOLDER --><em class="placeholder">Date Range</em></span>
+            </div>
+            <h3 class="timeline-role"><em class="placeholder">Previous Job Title</em></h3>
+            <p class="timeline-desc"><em class="placeholder">Key responsibilities and achievements at this role.</em></p>
+            <div class="timeline-tags">
+              <span>Platform Engineering</span><span>CI/CD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-company"><em class="placeholder">Earlier Company</em></span>
+              <span class="timeline-period"><em class="placeholder">Date Range</em></span>
+            </div>
+            <h3 class="timeline-role"><em class="placeholder">Earlier Role Title</em></h3>
+            <p class="timeline-desc"><em class="placeholder">Key responsibilities and achievements at this role.</em></p>
+            <div class="timeline-tags">
+              <span>Backend</span><span>Automation</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <span class="section-label">03 / Projects</span>
+        <h2>Selected Work</h2>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card reveal">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/shubhojit82/AIAssistant" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AI Assistant</h3>
+          <p class="project-desc">Personal AI assistant and automation toolkit built in Python. Integrates conversational NLP components and automates common workflows and prototypes.</p>
+          <div class="project-tags">
+            <span>Python</span><span>NLP</span><span>Automation</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-1">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/shubhojit82/edge-delivery" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Edge Delivery</h3>
+          <p class="project-desc">Edge delivery tooling and pipeline in JavaScript. Fast client-side delivery patterns and performance-focused deployment helpers for modern web platforms.</p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>Performance</span><span>Edge</span>
+          </div>
+        </article>
+
+        <article class="project-card reveal reveal-delay-2">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/shubhojit82/optimum" target="_blank" rel="noopener" aria-label="View on GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">Optimum</h3>
+          <p class="project-desc">Utilities and examples for performance optimization. Helpful for benchmarking and improving client/server performance in production environments.</p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>Optimization</span><span>Benchmarking</span>
+          </div>
+        </article>
+
+        <article class="project-card project-card--placeholder reveal reveal-delay-3">
+          <div class="project-header">
+            <div class="project-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+          </div>
+          <h3 class="project-title"><em class="placeholder">Your Next Project</em></h3>
+          <p class="project-desc"><em class="placeholder">Describe a featured project — what problem it solves, the tech stack, and the outcome achieved.</em></p>
+          <div class="project-tags">
+            <span class="placeholder">Tech</span><span class="placeholder">Stack</span>
+          </div>
+        </article>
+
+      </div>
+      <p class="more-link reveal">
+        <a href="https://github.com/shubhojit82?tab=repositories" target="_blank" rel="noopener">
+          View all repositories on GitHub
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section section-alt">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <span class="section-label">04 / Skills</span>
+        <h2>Expertise & Tools</h2>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            Architecture & Design
+          </h3>
+          <div class="skill-pills">
+            <span>Enterprise Architecture</span>
+            <span>System Design</span>
+            <span>Microservices</span>
+            <span>API Design</span>
+            <span>Solution Architecture</span>
+            <span><!-- PLACEHOLDER --><em class="placeholder">Add skill</em></span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal reveal-delay-1">
+          <h3 class="skill-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            AI & Machine Learning
+          </h3>
+          <div class="skill-pills">
+            <span>Applied AI</span>
+            <span>LLMs & RAG</span>
+            <span>ML Ops</span>
+            <span>NLP</span>
+            <span>Model Deployment</span>
+            <span><em class="placeholder">Add skill</em></span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal reveal-delay-2">
+          <h3 class="skill-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            Cloud & Platform
+          </h3>
+          <div class="skill-pills">
+            <span>AWS</span>
+            <span>Docker</span>
+            <span>Kubernetes</span>
+            <span>Terraform</span>
+            <span>CI/CD</span>
+            <span>Observability</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal reveal-delay-3">
+          <h3 class="skill-group-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Languages & Frameworks
+          </h3>
+          <div class="skill-pills">
+            <span>Python</span>
+            <span>JavaScript</span>
+            <span>TypeScript</span>
+            <span><em class="placeholder">Add language</em></span>
+            <span><em class="placeholder">Add framework</em></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="section-header reveal">
+        <span class="section-label">05 / Contact</span>
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-text reveal">
+          <p>I'm available for freelance projects, remote roles, and consulting engagements. Whether you want to discuss a project, explore collaboration, or just say hello — I'd love to hear from you.</p>
+          <p><em class="placeholder">Add any additional context — preferred project types, response time, timezone, etc.</em></p>
+        </div>
+        <div class="contact-cards reveal reveal-delay-1">
+          <a class="contact-card" href="mailto:shubhojit.chowdhury@gmail.com">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-card-label">Email</div>
+              <div class="contact-card-value">shubhojit.chowdhury@gmail.com</div>
+            </div>
+          </a>
+          <a class="contact-card" href="https://github.com/shubhojit82" target="_blank" rel="noopener">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <div class="contact-card-label">GitHub</div>
+              <div class="contact-card-value">github.com/shubhojit82</div>
+            </div>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/shubhojitchowdhury" target="_blank" rel="noopener">
+            <div class="contact-card-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div>
+              <div class="contact-card-label">LinkedIn</div>
+              <div class="contact-card-value">in/shubhojitchowdhury</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Shubhojit Chowdhury</span>
+        <span class="footer-tagline">Forward-Deployed AI Architect</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-left">
-          <h1>Shubhojit Chowdhury</h1>
-          <p class="role">Forward‑Deployed AI Architect • Enterprise Solution Architect</p>
-          <p class="lead">I design and deliver production systems that combine enterprise architecture with applied AI — focused on reliability, scale, and security.</p>
-
-          <p class="actions">
-            <a class="btn" href="#projects">See projects</a>
-            <a class="btn ghost" href="https://github.com/shubhojit82" target="_blank" rel="noopener">GitHub</a>
-          </p>
-
-          <ul class="quick">
-            <li>Enterprise architecture</li>
-            <li>Applied AI & automation</li>
-            <li>Cloud‑native platforms</li>
-          </ul>
-        </div>
-
-        <aside class="hero-card">
-          <img class="avatar" src="https://avatars.githubusercontent.com/u/31447207?v=4" alt="Shubhojit" width="140" height="140">
-          <div class="meta">
-            <div>Forward‑Deployed AI Architect</div>
-            <div>Available for freelance & remote roles</div>
-          </div>
-        </aside>
+      <div class="footer-bottom">
+        <small>© <span id="year"></span> Shubhojit Chowdhury. Built for production.</small>
       </div>
-    </section>
-
-    <section id="about" class="wrap section">
-      <h2>About</h2>
-      <p>I work at the intersection of enterprise architecture and applied AI, helping teams ship production‑ready systems that are maintainable and secure. My core focus: system design, automation, and measurable business outcomes from AI projects.</p>
-    </section>
-
-    <section id="projects" class="wrap section">
-      <h2>Selected projects</h2>
-      <div class="projects-grid">
-        <article class="card">
-          <h3><a href="https://github.com/shubhojit82/AIAssistant" target="_blank" rel="noopener">AIAssistant</a></h3>
-          <p>Personal AI assistant and automation toolkit (Python). Integrates conversational NLP components and automates common workflows and prototypes.</p>
-          <div class="tags">Python • Automation</div>
-        </article>
-
-        <article class="card">
-          <h3><a href="https://github.com/shubhojit82/edge-delivery" target="_blank" rel="noopener">edge-delivery</a></h3>
-          <p>Edge delivery tooling and pipeline (JavaScript). Fast client‑side delivery patterns and performance‑focused deployment helpers.</p>
-          <div class="tags">JavaScript • Performance</div>
-        </article>
-
-        <article class="card">
-          <h3><a href="https://github.com/shubhojit82/optimum" target="_blank" rel="noopener">optimum</a></h3>
-          <p>Utilities and examples for performance and optimization (JavaScript). Helpful for benchmarking and improving client/server performance.</p>
-          <div class="tags">JavaScript • Optimization</div>
-        </article>
-      </div>
-
-      <p class="more"><a href="https://github.com/shubhojit82?tab=repositories" target="_blank" rel="noopener">See all repositories →</a></p>
-    </section>
-
-    <section id="skills" class="wrap section">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Architecture</span>
-        <span>AI/ML</span>
-        <span>Cloud (AWS)</span>
-        <span>Docker & Kubernetes</span>
-        <span>Terraform</span>
-        <span>CI/CD</span>
-        <span>Observability</span>
-      </div>
-    </section>
-
-    <section id="contact" class="wrap section">
-      <h2>Contact</h2>
-      <p>I’m available for freelance and remote roles. Connect on <a href="https://www.linkedin.com/in/shubhojitchowdhury" target="_blank" rel="noopener">LinkedIn</a> or email me at <a href="mailto:shubhojit.chowdhury@gmail.com">shubhojit.chowdhury@gmail.com</a>.</p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <small>© <span id="year"></span> Shubhojit Chowdhury — Built with focus on reliability and scale.</small>
     </div>
   </footer>
 
-  <script src="/docs/script.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
