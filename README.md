@@ -1,114 +1,61 @@
-<h1 align="center">Hi, I'm Shubhojit Chowdhury</h1>
-
-<h3 align="center">
-Forward-Deployed AI Architect | Enterprise Platforms | Digital Experience
-</h3>
+# Shubhojit Chowdhury
 
 <p align="center">
-I turn complex enterprise challenges into deployable AI agents,
-intelligent workflows, and scalable digital platforms.
+  <img src="https://avatars.githubusercontent.com/u/31447207?v=4" width="120" alt="Shubhojit" />
 </p>
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/shubhojitchowdhury">LinkedIn</a>
-</p>
+<h3 align="center">Forward‑Deployed AI Architect • Enterprise Solution Architect</h3>
+
+<p align="center">I design and deliver production systems that combine enterprise architecture with applied AI — focused on reliable, scalable, and secure solutions.</p>
 
 ---
 
-## About Me
+<!-- GitHub stats -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=shubhojit82&show_icons=true&theme=dark&count_private=true" alt="GitHub stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shubhojit82&layout=compact&theme=dark" alt="Top languages" />
+</p>
 
-I am an Enterprise and Solution Architect with more than 18 years of
-experience designing, modernizing, and delivering large-scale technology
-platforms.
+## About
 
-My expertise spans:
+I work at the intersection of enterprise architecture and applied AI, helping teams ship production-ready systems that are maintainable and secure. My focus areas include system design, automation, and delivering measurable business outcomes from AI projects.
 
-- Agentic AI and intelligent workflow automation
-- Enterprise architecture and application modernization
-- Adobe Experience Cloud and digital experience platforms
-- Cloud-native microservices and event-driven systems
-- Enterprise integration and multi-tenant SaaS platforms
+- Role: Forward‑Deployed AI Architect & Enterprise Solution Architect
+- Areas: Architecture, AI/ML integration, cloud native platforms, automation, and observability
 
-I specialize in moving ideas beyond presentations and prototypes—turning
-ambiguous business problems into secure, scalable, and deployable solutions.
+## Tech & tools
 
-## Current Focus
+React • Node.js • Python • Docker • Kubernetes • AWS • PostgreSQL • Terraform • CI/CD • Observability
 
-- Enterprise AI agents with human-in-the-loop governance
-- Retrieval-augmented generation and intelligent workflows
-- AI-powered meeting intelligence and capacity planning
-- Enterprise platform modernization
-- Adobe Workfront and enterprise storage integrations
-- Adobe Experience Manager and Edge Delivery Services
-- Scalable multi-tenant SaaS platforms
+## Selected projects
 
-## Featured Project
+> I used the repository description and profile information to create this profile; please replace the placeholders below with links and short descriptions for each project you want highlighted.
 
-### AI Calendar and Meeting Assistant
+- [Project One — placeholder](https://github.com/shubhojit82) — Short one‑liner describing impact, tech, and scale.
+- [Project Two — placeholder](https://github.com/shubhojit82) — Short one‑liner describing impact, tech, and scale.
+- [Project Three — placeholder](https://github.com/shubhojit82) — Short one‑liner describing impact, tech, and scale.
 
-A Python-based AI assistant that integrates with Google Calendar,
-summarizes upcoming meetings, and provides intelligent reminders.
+If you'd like, I can fetch your top public repos and draft the descriptions for you — say “auto-fill projects” and I’ll pull the 3 most starred repos and write concise summaries.
 
-**Technologies:** Python, OpenAI, Google Calendar API, OAuth 2.0
+## Get in touch
 
-[Explore the project](https://github.com/shubhojit82/AIAssistant)
-
-## Core Capabilities
-
-### Artificial Intelligence
-
-`Agentic AI` `LLM Applications` `RAG` `Prompt Engineering`  
-`AI Workflow Automation` `Human-in-the-Loop Systems` `Responsible AI`
-
-### Enterprise Architecture
-
-`Solution Architecture` `Microservices` `Event-Driven Architecture`  
-`API-First Design` `Integration Architecture` `Multi-Tenant SaaS`
-
-### Adobe Experience Cloud
-
-`Adobe Experience Manager` `AEM Sites` `AEM Assets`  
-`Edge Delivery Services` `Adobe Workfront` `Workfront Fusion`  
-`Adobe Experience Platform` `Customer Journey Analytics`
-
-### Engineering
-
-`Java` `Spring Boot` `Python` `JavaScript` `REST` `GraphQL`  
-`Kafka` `Docker` `Kubernetes` `GitHub Actions` `CI/CD`
-
-### Cloud and Data
-
-`Microsoft Azure` `AWS` `Google Cloud`  
-`MongoDB` `Cassandra` `Snowflake` `Databricks`
-
-## Certifications
-
-- Adobe Certified Master – AEM Sites Architect
-- Adobe Certified Expert – AEM DevOps Engineer
-- Adobe Experience Manager Sites Developer
-- Adobe Experience Manager Sites Business Practitioner
-- IBM WebSphere Commerce Foundations
-- IBM Watson Speech to Text
-
-## Architecture Principles
-
-> Start with the business outcome.  
-> Design for security and operability.  
-> Keep humans accountable for high-impact decisions.  
-> Prefer reusable platforms over one-time solutions.  
-> Make architecture executable—not merely presentable.
-
-## Let's Connect
-
-I am interested in collaborating on enterprise AI, agentic workflows,
-Adobe Experience Cloud, application modernization, and open-source
-architecture accelerators.
-
-Connect with me on
-[LinkedIn](https://www.linkedin.com/in/shubhojitchowdhury).
+- GitHub: [@shubhojit82](https://github.com/shubhojit82)
+- LinkedIn: (add your LinkedIn URL here)
+- Email: (add your preferred contact email here)
 
 ---
 
-<p align="center">
-Building intelligent systems that connect strategy, architecture, and execution.
-</p>
+## GitHub Pages & portfolio
+
+If you want a responsive portfolio site (like the sample you shared) I can:
+
+1. Create the repository `shubhojit82.github.io` and commit a responsive, modern portfolio (HTML/CSS/JS).
+2. Or add the site to this repo and enable GitHub Pages from the `main` branch `/docs` folder.
+
+Tell me which option you prefer and provide:
+- 1–3 project links with a 1‑line description each (or say “auto-fill”),
+- an avatar image URL (or I’ll use your GitHub avatar),
+- optional preferred accent color (hex),
+- and whether to include a downloadable resume (upload to the repo or provide a link).
+
+Once you confirm I will commit the portfolio files and enable Pages for the chosen repository.
