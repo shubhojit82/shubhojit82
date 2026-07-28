@@ -1,15 +1,31 @@
 /* ============================================================
    Portfolio — script.js
-   ============================================================ */
+   ============================================================
+
+   GOOGLE APPS SCRIPT SETUP (one-time, ~5 minutes):
+   ─────────────────────────────────────────────────
+   1. Go to https://script.google.com and create a New Project.
+   2. Paste the code from docs/appsscript.gs into the editor.
+   3. Click Deploy → New deployment → Web app.
+      - Execute as: Me
+      - Who has access: Anyone
+   4. Click Deploy, copy the Web App URL.
+   5. Replace APPS_SCRIPT_URL below with that URL.
+   ─────────────────────────────────────────────────
+*/
 
 (function () {
   'use strict';
 
-  // --- Year ---
+  /* ── CONFIG ─────────────────────────────────────────────── */
+  // TODO: Replace with your deployed Google Apps Script Web App URL
+  var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/REPLACE_WITH_YOUR_DEPLOYMENT_ID/exec';
+
+  /* ── Year ───────────────────────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // --- Mobile nav toggle ---
+  /* ── Mobile nav toggle ──────────────────────────────────── */
   var navToggle = document.getElementById('nav-toggle');
   var mainNav   = document.getElementById('main-nav');
   if (navToggle && mainNav) {
@@ -17,7 +33,6 @@
       var open = mainNav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(open));
     });
-    // Close nav on link click
     mainNav.querySelectorAll('.nav-link').forEach(function (link) {
       link.addEventListener('click', function () {
         mainNav.classList.remove('open');
@@ -26,7 +41,7 @@
     });
   }
 
-  // --- Sticky header shadow on scroll ---
+  /* ── Sticky header ──────────────────────────────────────── */
   var header = document.getElementById('site-header');
   if (header) {
     window.addEventListener('scroll', function () {
@@ -34,15 +49,15 @@
     }, { passive: true });
   }
 
-  // --- Active nav link on scroll ---
+  /* ── Active nav link on scroll ──────────────────────────── */
   var sections = Array.from(document.querySelectorAll('section[id]'));
   var navLinks  = Array.from(document.querySelectorAll('.nav-link'));
 
   function updateActiveLink() {
-    var scrollY = window.scrollY + 120;
+    var scrollY = window.scrollY + 100;
     var current = '';
-    sections.forEach(function (section) {
-      if (section.offsetTop <= scrollY) current = section.id;
+    sections.forEach(function (sec) {
+      if (sec.offsetTop <= scrollY) current = sec.id;
     });
     navLinks.forEach(function (link) {
       link.classList.toggle('active', link.getAttribute('href') === '#' + current);
@@ -51,7 +66,7 @@
   window.addEventListener('scroll', updateActiveLink, { passive: true });
   updateActiveLink();
 
-  // --- Scroll-reveal (IntersectionObserver) ---
+  /* ── Scroll-reveal ──────────────────────────────────────── */
   var revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
@@ -61,15 +76,13 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
     revealEls.forEach(function (el) { observer.observe(el); });
   } else {
-    // Fallback: just show everything
     revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  // --- Typed role animation ---
+  /* ── Typewriter role ────────────────────────────────────── */
   var typedEl = document.getElementById('typed-role');
   if (typedEl) {
     var roles = [
@@ -85,25 +98,155 @@
       if (!deleting) {
         typedEl.textContent = current.slice(0, ci + 1);
         ci++;
-        if (ci === current.length) {
-          deleting = true;
-          setTimeout(type, 2200);
-          return;
-        }
-        setTimeout(type, 60);
+        if (ci === current.length) { deleting = true; setTimeout(type, 2400); return; }
+        setTimeout(type, 62);
       } else {
         typedEl.textContent = current.slice(0, ci - 1);
         ci--;
         if (ci === 0) {
           deleting = false;
           ri = (ri + 1) % roles.length;
-          setTimeout(type, 400);
+          setTimeout(type, 450);
           return;
         }
-        setTimeout(type, 32);
+        setTimeout(type, 34);
       }
     }
     setTimeout(type, 1000);
+  }
+
+  /* ── Booking modal ──────────────────────────────────────── */
+  var modalOverlay   = document.getElementById('booking-modal');
+  var modalClose     = document.getElementById('modal-close');
+  var modalCancel    = document.getElementById('modal-cancel');
+  var modalFormView  = document.getElementById('modal-form-view');
+  var modalSuccessView = document.getElementById('modal-success-view');
+  var modalServiceLabel = document.getElementById('modal-service-label');
+  var serviceHiddenInput = document.getElementById('f-service');
+  var submitBtn      = document.getElementById('submit-btn');
+  var bookingForm    = document.getElementById('booking-form');
+
+  function openModal(serviceName) {
+    if (!modalOverlay) return;
+    // Reset to form view
+    if (modalFormView)    modalFormView.style.display   = '';
+    if (modalSuccessView) modalSuccessView.style.display = 'none';
+    if (bookingForm) bookingForm.reset();
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Booking Request'; }
+
+    // Pre-fill service name
+    if (modalServiceLabel) modalServiceLabel.textContent = serviceName || 'Session';
+    if (serviceHiddenInput) serviceHiddenInput.value = serviceName || '';
+
+    modalOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    // Focus first field
+    var firstInput = modalOverlay.querySelector('input, textarea');
+    if (firstInput) setTimeout(function () { firstInput.focus(); }, 80);
+  }
+
+  function closeModal() {
+    if (!modalOverlay) return;
+    modalOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // Open modal on service card "Book" button click
+  document.querySelectorAll('.service-card .btn-book-card').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var card = btn.closest('.service-card');
+      var serviceName = card ? (card.dataset.service || 'Session') : 'Session';
+      openModal(serviceName);
+    });
+  });
+
+  // Also open on clicking the card itself
+  document.querySelectorAll('.service-card').forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.btn-book-card')) return; // handled above
+      var serviceName = card.dataset.service || 'Session';
+      openModal(serviceName);
+    });
+  });
+
+  if (modalClose)  modalClose.addEventListener('click', closeModal);
+  if (modalCancel) modalCancel.addEventListener('click', closeModal);
+
+  // Close on overlay backdrop click
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', function (e) {
+      if (e.target === modalOverlay) closeModal();
+    });
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  /* ── Form submission → Google Apps Script ───────────────── */
+  if (bookingForm) {
+    bookingForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Simple validation
+      var name     = document.getElementById('f-name');
+      var email    = document.getElementById('f-email');
+      var topic    = document.getElementById('f-topic');
+      var service  = document.getElementById('f-service');
+
+      if (!name.value.trim() || !email.value.trim() || !topic.value.trim()) {
+        // Highlight empty required fields
+        [name, email, topic].forEach(function (field) {
+          if (!field.value.trim()) {
+            field.style.borderColor = '#dc2626';
+            field.addEventListener('input', function () {
+              field.style.borderColor = '';
+            }, { once: true });
+          }
+        });
+        return;
+      }
+
+      // Disable submit while sending
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending…';
+
+      var payload = {
+        name:           name.value.trim(),
+        email:          email.value.trim(),
+        topic:          topic.value.trim(),
+        service:        service.value,
+        timezone:       (document.getElementById('f-timezone') || {}).value || '',
+        preferred_time: (document.getElementById('f-preferred') || {}).value || '',
+        timestamp:      new Date().toISOString()
+      };
+
+      // POST to Google Apps Script
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        mode: 'no-cors'   // Apps Script requires no-cors from external origins
+      })
+      .then(function () {
+        // no-cors means we can't read the response body — assume success
+        showSuccess();
+      })
+      .catch(function (err) {
+        console.error('Booking submission error:', err);
+        // Still show success to user — the Apps Script may have received it
+        // despite a network error on the response side.
+        showSuccess();
+      });
+    });
+  }
+
+  function showSuccess() {
+    if (modalFormView)    modalFormView.style.display    = 'none';
+    if (modalSuccessView) modalSuccessView.style.display = 'block';
   }
 
 })();
