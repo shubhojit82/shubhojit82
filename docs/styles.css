@@ -683,6 +683,58 @@ h3 { font-size: 1rem;  font-weight: 600; line-height: 1.3; color: var(--text); }
 }
 .more-link a:hover { gap: 10px; }
 
+/* language badge + icon colours on project cards */
+.project-links { display: flex; align-items: center; gap: 6px; }
+.project-lang-badge {
+  padding: 2px 9px;
+  background: var(--bg-deep);
+  border: 1.5px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.7rem; font-weight: 700; color: var(--text-muted);
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+.project-gh-link {
+  display: flex; align-items: center; justify-content: center;
+  width: 30px; height: 30px; border-radius: var(--radius-sm);
+  color: var(--text-muted); background: var(--bg-deep); border: 1.5px solid var(--border);
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+.project-gh-link:hover { color: var(--accent); background: var(--accent-light); border-color: rgba(67,56,202,0.25); }
+
+.project-icon--php     { background: #fdf4ff; color: #7c3aed; border-color: rgba(124,58,237,0.15); }
+.project-icon--python  { background: #eff6ff; color: #1d4ed8; border-color: rgba(29,78,216,0.15); }
+.project-icon--js      { background: #fefce8; color: #b45309; border-color: rgba(180,83,9,0.15); }
+.project-icon--java    { background: #fff7ed; color: #c2410c; border-color: rgba(194,65,12,0.15); }
+.project-icon--devops  { background: #f0fdf4; color: #15803d; border-color: rgba(21,128,61,0.15); }
+
+/* project-desc inline code */
+.project-desc code {
+  font-size: 0.8rem;
+  background: var(--bg-deep);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  color: var(--text);
+}
+
+/* "View all on GitHub" CTA banner */
+.projects-cta { margin-top: 32px; }
+.projects-cta-inner {
+  display: flex; align-items: center; gap: 18px;
+  background: var(--bg-alt);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  flex-wrap: wrap;
+}
+.projects-cta-inner > svg { flex-shrink: 0; color: var(--text-muted); }
+.projects-cta-inner > div { flex: 1; min-width: 160px; }
+.projects-cta-label { font-size: 0.9rem; font-weight: 700; color: var(--text); }
+.projects-cta-sub { font-size: 0.78rem; color: var(--text-muted); margin-top: 2px; }
+.projects-cta-inner .btn-primary { flex-shrink: 0; }
+
 /* ============================================================
    SKILLS
    ============================================================ */
