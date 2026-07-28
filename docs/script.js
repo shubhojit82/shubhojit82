@@ -86,10 +86,10 @@
   var typedEl = document.getElementById('typed-role');
   if (typedEl) {
     var roles = [
-      'Forward-Deployed AI Architect',
-      'Enterprise Solution Architect',
-      'Platform Engineering Leader',
-      'Applied AI Engineer'
+      'Application Architect at IBM',
+      'Enterprise Digital Transformation',
+      'AI Strategy & Architecture',
+      'E-Commerce Platform Expert'
     ];
     var ri = 0, ci = 0, deleting = false;
 
