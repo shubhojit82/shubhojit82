@@ -154,9 +154,10 @@
     var roles = [
         'Enterprise AI & Transformation Architect',
         'Adobe Experience Cloud Architect',
+        'Shopify & Composable Commerce Architect',
         'Content Supply Chain Strategist',
         'Governed AI & Workfront Expert',
-        'Digital Transformation Leader'
+        'Digital Experience & Commerce Leader'
       ];
     var ri = 0, ci = 0, deleting = false;
 
