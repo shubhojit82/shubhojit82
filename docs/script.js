@@ -101,7 +101,7 @@
         counterObserver.unobserve(entry.target);
         animateCounter(entry.target);
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0.15, rootMargin: '0px 0px -20px 0px' });
     statEls.forEach(function (el) { counterObserver.observe(el); });
   } else {
     statEls.forEach(function (el) {
@@ -152,11 +152,12 @@
   var typedEl = document.getElementById('typed-role');
   if (typedEl) {
     var roles = [
-      'Application Architect at IBM',
-      'Enterprise Digital Transformation',
-      'AI Strategy & Architecture',
-      'E-Commerce Platform Expert'
-    ];
+        'Enterprise AI & Transformation Architect',
+        'Adobe Experience Cloud Architect',
+        'Content Supply Chain Strategist',
+        'Governed AI & Workfront Expert',
+        'Digital Transformation Leader'
+      ];
     var ri = 0, ci = 0, deleting = false;
 
     function type() {
@@ -179,6 +180,25 @@
       }
     }
     setTimeout(type, 1000);
+  }
+
+  /* ── Testimonials scroll dots ───────────────────────────── */
+  var tScroll = document.getElementById('testimonials-scroll');
+  var tDots   = document.querySelectorAll('#testimonials-dots button');
+  if (tScroll && tDots.length) {
+    // Update active dot on scroll
+    tScroll.addEventListener('scroll', function () {
+      var idx = Math.round(tScroll.scrollLeft / (tScroll.scrollWidth / tDots.length));
+      tDots.forEach(function (d, i) { d.classList.toggle('active', i === idx); });
+    }, { passive: true });
+    // Click dot to scroll to card
+    tDots.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var idx = parseInt(btn.getAttribute('data-idx'), 10);
+        var card = tScroll.querySelectorAll('.testimonial-card')[idx];
+        if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+      });
+    });
   }
 
   /* ── Booking modal ──────────────────────────────────────── */
