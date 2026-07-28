@@ -18,12 +18,22 @@
   'use strict';
 
   /* ── CONFIG ─────────────────────────────────────────────── */
-  // TODO: Replace with your deployed Google Apps Script Web App URL
   var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxG4vTawxZX4s4z-s_TdvLSrQ86_j71tb9QgVBbgjofXUlsa7i4jOiD2PeBGA9rWMLR/exec';
 
   /* ── Year ───────────────────────────────────────────────── */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ── Reading progress bar ───────────────────────────────── */
+  var progressBar = document.getElementById('reading-progress');
+  if (progressBar) {
+    window.addEventListener('scroll', function () {
+      var scrollTop  = window.scrollY;
+      var docHeight  = document.documentElement.scrollHeight - window.innerHeight;
+      var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      progressBar.style.width = pct + '%';
+    }, { passive: true });
+  }
 
   /* ── Mobile nav toggle ──────────────────────────────────── */
   var navToggle = document.getElementById('nav-toggle');
@@ -82,6 +92,62 @@
     revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
+  /* ── Animated stat counters ─────────────────────────────── */
+  var statEls = document.querySelectorAll('.stat-number[data-target]');
+  if ('IntersectionObserver' in window && statEls.length) {
+    var counterObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        counterObserver.unobserve(entry.target);
+        animateCounter(entry.target);
+      });
+    }, { threshold: 0.5 });
+    statEls.forEach(function (el) { counterObserver.observe(el); });
+  } else {
+    statEls.forEach(function (el) {
+      el.textContent = el.getAttribute('data-target') + (el.getAttribute('data-suffix') || '');
+    });
+  }
+
+  function animateCounter(el) {
+    var target  = parseInt(el.getAttribute('data-target'), 10);
+    var suffix  = el.getAttribute('data-suffix') || '';
+    var duration = 1400;
+    var start    = null;
+    var startVal = 0;
+
+    function step(timestamp) {
+      if (!start) start = timestamp;
+      var progress = Math.min((timestamp - start) / duration, 1);
+      // ease-out cubic
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.round(startVal + eased * (target - startVal));
+      el.textContent = current.toLocaleString() + suffix;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* ── Skill progress bars ────────────────────────────────── */
+  var barEls = document.querySelectorAll('.skill-bar-fill[data-width]');
+  if ('IntersectionObserver' in window && barEls.length) {
+    var barObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        barObserver.unobserve(entry.target);
+        // Small delay so transition is visible after paint
+        setTimeout(function () {
+          entry.target.style.width = entry.target.getAttribute('data-width') + '%';
+        }, 120);
+      });
+    }, { threshold: 0.3 });
+    barEls.forEach(function (el) { barObserver.observe(el); });
+  } else {
+    barEls.forEach(function (el) {
+      el.style.width = el.getAttribute('data-width') + '%';
+    });
+  }
+
   /* ── Typewriter role ────────────────────────────────────── */
   var typedEl = document.getElementById('typed-role');
   if (typedEl) {
@@ -116,32 +182,29 @@
   }
 
   /* ── Booking modal ──────────────────────────────────────── */
-  var modalOverlay   = document.getElementById('booking-modal');
-  var modalClose     = document.getElementById('modal-close');
-  var modalCancel    = document.getElementById('modal-cancel');
-  var modalFormView  = document.getElementById('modal-form-view');
-  var modalSuccessView = document.getElementById('modal-success-view');
+  var modalOverlay      = document.getElementById('booking-modal');
+  var modalClose        = document.getElementById('modal-close');
+  var modalCancel       = document.getElementById('modal-cancel');
+  var modalFormView     = document.getElementById('modal-form-view');
+  var modalSuccessView  = document.getElementById('modal-success-view');
   var modalServiceLabel = document.getElementById('modal-service-label');
   var serviceHiddenInput = document.getElementById('f-service');
-  var submitBtn      = document.getElementById('submit-btn');
-  var bookingForm    = document.getElementById('booking-form');
+  var submitBtn         = document.getElementById('submit-btn');
+  var bookingForm       = document.getElementById('booking-form');
 
   function openModal(serviceName) {
     if (!modalOverlay) return;
-    // Reset to form view
     if (modalFormView)    modalFormView.style.display   = '';
     if (modalSuccessView) modalSuccessView.style.display = 'none';
     if (bookingForm) bookingForm.reset();
     if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Booking Request'; }
 
-    // Pre-fill service name
     if (modalServiceLabel) modalServiceLabel.textContent = serviceName || 'Session';
     if (serviceHiddenInput) serviceHiddenInput.value = serviceName || '';
 
     modalOverlay.classList.add('open');
     document.body.style.overflow = 'hidden';
 
-    // Focus first field
     var firstInput = modalOverlay.querySelector('input, textarea');
     if (firstInput) setTimeout(function () { firstInput.focus(); }, 80);
   }
@@ -152,7 +215,6 @@
     document.body.style.overflow = '';
   }
 
-  // Open modal on service card "Book" button click
   document.querySelectorAll('.service-card .btn-book-card').forEach(function (btn) {
     btn.addEventListener('click', function (e) {
       e.stopPropagation();
@@ -162,10 +224,9 @@
     });
   });
 
-  // Also open on clicking the card itself
   document.querySelectorAll('.service-card').forEach(function (card) {
     card.addEventListener('click', function (e) {
-      if (e.target.closest('.btn-book-card')) return; // handled above
+      if (e.target.closest('.btn-book-card')) return;
       var serviceName = card.dataset.service || 'Session';
       openModal(serviceName);
     });
@@ -174,14 +235,12 @@
   if (modalClose)  modalClose.addEventListener('click', closeModal);
   if (modalCancel) modalCancel.addEventListener('click', closeModal);
 
-  // Close on overlay backdrop click
   if (modalOverlay) {
     modalOverlay.addEventListener('click', function (e) {
       if (e.target === modalOverlay) closeModal();
     });
   }
 
-  // Close on Escape key
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeModal();
   });
@@ -191,14 +250,12 @@
     bookingForm.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Simple validation
-      var name     = document.getElementById('f-name');
-      var email    = document.getElementById('f-email');
-      var topic    = document.getElementById('f-topic');
-      var service  = document.getElementById('f-service');
+      var name    = document.getElementById('f-name');
+      var email   = document.getElementById('f-email');
+      var topic   = document.getElementById('f-topic');
+      var service = document.getElementById('f-service');
 
       if (!name.value.trim() || !email.value.trim() || !topic.value.trim()) {
-        // Highlight empty required fields
         [name, email, topic].forEach(function (field) {
           if (!field.value.trim()) {
             field.style.borderColor = '#dc2626';
@@ -210,12 +267,10 @@
         return;
       }
 
-      // Disable submit while sending
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
-      // Build form-encoded body — this is a "simple request" so no CORS preflight,
-      // which means Apps Script actually receives the data (JSON+no-cors does NOT work).
+      // URLSearchParams is a "simple request" — no CORS preflight, Apps Script receives the data.
       var params = new URLSearchParams({
         name:           name.value.trim(),
         email:          email.value.trim(),
