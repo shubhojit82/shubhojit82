@@ -1,0 +1,71 @@
+{
+  "_meta": "Recognition, awards, judging, and professional memberships. Add evidence_url when certificates are available publicly.",
+  "awards": [
+    {
+      "id": "ibm-top-contributor",
+      "title": "IBM GBS GD Top Contributor Award",
+      "org": "IBM Consulting",
+      "year": "[YEAR — PLACEHOLDER: confirm year from award letter]",
+      "category": "client",
+      "status": "Certificate available",
+      "description": "Recognized for outstanding client delivery excellence across Fortune 500 enterprise programs.",
+      "evidence": "[PLACEHOLDER: add Credly or IBM internal badge URL]",
+      "tags": ["IBM", "Client Delivery", "Excellence"]
+    },
+    {
+      "id": "ibm-eminence",
+      "title": "IBM Eminence & Excellence Recognition",
+      "org": "IBM Consulting",
+      "year": "[YEAR — PLACEHOLDER: confirm year]",
+      "category": "client",
+      "status": "Certificate available",
+      "description": "Eminence & Excellence recognition for enterprise architecture leadership and client impact.",
+      "evidence": "[PLACEHOLDER]",
+      "tags": ["IBM", "Architecture", "Eminence"]
+    },
+    {
+      "id": "claro-judge-2026",
+      "title": "Technology Excellence Judge — 2026 Claro Awards",
+      "org": "Claro Awards · Industry Body",
+      "year": "2026",
+      "category": "industry",
+      "status": "Invitation accepted · Evaluation in progress",
+      "description": "Invited to serve as a judge for the 2026 Claro Awards for Technology Excellence, recognizing outstanding innovation across the US technology industry.",
+      "evidence": "[LinkedIn post — 45 reactions]",
+      "tags": ["Industry Judge", "Tech Excellence", "US Industry"]
+    },
+    {
+      "id": "adobe-certified-master",
+      "title": "Adobe Certified Master",
+      "org": "Adobe",
+      "year": "Active",
+      "category": "certification",
+      "status": "Publicly verifiable via Adobe credentials",
+      "description": "Adobe Certified Master — Experience Manager and Experience Cloud. 25+ Credly badges.",
+      "evidence": "[PLACEHOLDER: add Credly profile URL]",
+      "tags": ["Adobe", "Certified Master", "AEM", "25+ Badges"]
+    },
+    {
+      "id": "ieee-member",
+      "title": "IEEE Active Member",
+      "org": "IEEE · Institute of Electrical and Electronics Engineers",
+      "year": "Active",
+      "category": "membership",
+      "status": "Certificate available · Credly badge verified",
+      "description": "Active member of the IEEE, the world's largest technical professional organization. 1-Year Milestone badge issued via Credly.",
+      "evidence": "[PLACEHOLDER: add Credly badge URL]",
+      "tags": ["IEEE", "Active Member", "1-Year Milestone"]
+    },
+    {
+      "id": "moma-recognition",
+      "title": "MoMA Digital Transformation — Project Architect",
+      "org": "MoMA / IBM Consulting",
+      "year": "[YEAR — PLACEHOLDER: confirm year]",
+      "category": "client",
+      "status": "Verified · Client publicly named · Authorized résumé",
+      "description": "Recognized as project architect for MoMA digital transformation engagement.",
+      "evidence": "[PLACEHOLDER]",
+      "tags": ["MoMA", "Digital Transformation", "Client Recognition"]
+    }
+  ]
+}

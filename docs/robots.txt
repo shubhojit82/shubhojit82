@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shubhojit82.github.io/shubhojit82/docs/sitemap.xml

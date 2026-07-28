@@ -182,17 +182,37 @@ function doGet(e) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
+/* ── INPUT SANITIZATION ─────────────────────────────────────── */
+
+/**
+ * Strip leading = + - @ to prevent CSV/spreadsheet formula injection.
+ * Also enforce a maximum field length to prevent abuse.
+ */
+function sanitizeField(raw, maxLen) {
+  var s = (raw || '').trim();
+  if (maxLen && s.length > maxLen) s = s.substring(0, maxLen);
+  // Block formula injection prefixes
+  if (s && /^[=+\-@\t\r]/.test(s)) s = "'" + s;
+  return s;
+}
+
 function doPost(e) {
   try {
     var data = {
-      name:           (e.parameter.name           || '').trim(),
-      email:          (e.parameter.email          || '').trim(),
-      topic:          (e.parameter.topic          || '').trim(),
-      service:        (e.parameter.service        || '').trim(),
-      timezone:       (e.parameter.timezone       || '').trim(),
-      preferred_time: (e.parameter.preferred_time || '').trim(),
+      name:           sanitizeField(e.parameter.name,           120),
+      email:          sanitizeField(e.parameter.email,          200),
+      topic:          sanitizeField(e.parameter.topic,          500),
+      service:        sanitizeField(e.parameter.service,        200),
+      timezone:       sanitizeField(e.parameter.timezone,        80),
+      preferred_time: sanitizeField(e.parameter.preferred_time, 200),
       timestamp:      e.parameter.timestamp || new Date().toISOString()
     };
+    // Basic email format guard
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      return ContentService
+        .createTextOutput(JSON.stringify({ status: 'error', message: 'Invalid request.' }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
     appendToSheet(data);
     sendOwnerNotification(data);
     return ContentService
@@ -201,7 +221,7 @@ function doPost(e) {
   } catch (err) {
     Logger.log('doPost error: ' + err.toString());
     return ContentService
-      .createTextOutput(JSON.stringify({ status: 'error', message: err.toString() }))
+      .createTextOutput(JSON.stringify({ status: 'error', message: 'An error occurred. Please try again.' }))
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
@@ -517,7 +537,7 @@ function buildEmailWrapper(title, subtitle, rows, cta, callout) {
     +'<span style="color:#fff;font-size:16px;font-weight:800;display:block;line-height:44px;">'+CONFIG.LOGO_INITIALS+'</span></td>'
     +'<td style="padding-left:14px;">'
     +'<p style="margin:0;color:#fff;font-weight:800;font-size:17px;">'+esc(CONFIG.OWNER_NAME)+'</p>'
-    +'<p style="margin:3px 0 0;color:rgba(255,255,255,.7);font-size:12px;">Forward-Deployed AI Architect</p>'
+    +'<p style="margin:3px 0 0;color:rgba(255,255,255,.7);font-size:12px;">Enterprise AI, Digital Experience &amp; Commerce Architect</p>'
     +'</td></tr></table>'
     +'<h1 style="margin:18px 0 6px;color:#fff;font-size:20px;font-weight:800;line-height:1.2;">'+esc(title)+'</h1>'
     +'<p style="margin:0;color:rgba(255,255,255,.8);font-size:13px;">'+subtitle+'</p>'
