@@ -1,55 +1,110 @@
-# Shubhojit Chowdhury
+# Shubhojit Chowdhury — Professional Portfolio
 
-<p align="center">
-  <img src="https://avatars.githubusercontent.com/u/31447207?v=4" width="120" alt="Shubhojit" />
-</p>
+**Enterprise AI, Digital Experience & Commerce Architect**  
+Adobe Experience Cloud · Governed AI · Enterprise Commerce · Composable Architecture · Enterprise Integration
 
-<h3 align="center">Forward‑Deployed AI Architect • Enterprise Solution Architect</h3>
-
-<p align="center">I design and deliver production systems that combine enterprise architecture with applied AI — focused on reliable, scalable, and secure solutions.</p>
+> Designing governed AI systems, intelligent content operations, composable-commerce ecosystems, and cloud-native enterprise platforms that move complex transformation programs from strategy to production.
 
 ---
 
-<!-- GitHub stats -->
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=shubhojit82&show_icons=true&theme=dark&count_private=true" alt="GitHub stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=shubhojit82&layout=compact&theme=dark" alt="Top languages" />
-</p>
+## 🌐 Live Site
 
-## About
-
-I work at the intersection of enterprise architecture and applied AI, helping teams ship production-ready systems that are maintainable and secure. My focus areas include system design, automation, and delivering measurable business outcomes from AI projects.
-
-- Role: Forward‑Deployed AI Architect & Enterprise Solution Architect
-- Areas: Architecture, AI/ML integration, cloud native platforms, automation, and observability
-
-## Tech & tools
-
-React • Node.js • Python • Docker • Kubernetes • AWS • PostgreSQL • Terraform • CI/CD • Observability
-
-## Selected projects
-
-- [AIAssistant](https://github.com/shubhojit82/AIAssistant) — Personal AI assistant and automation toolkit (Python). Integrates conversational NLP components and automates common workflows and prototypes.
-- [edge-delivery](https://github.com/shubhojit82/edge-delivery) — Edge delivery tooling and pipeline (JavaScript). Fast client‑side delivery patterns and performance‑focused deployment helpers.
-- [optimum](https://github.com/shubhojit82/optimum) — Utilities and examples for performance and optimization (JavaScript). Helpful for benchmarking and improving client/server performance.
-
-If any of these descriptions need tweaks or you want different repos highlighted, tell me which ones and I'll update the summaries.
-
-## Get in touch
-
-- GitHub: [@shubhojit82](https://github.com/shubhojit82)
-- LinkedIn: https://www.linkedin.com/in/shubhojitchowdhury
-- Email: shubhojit.chowdhury@gmail.com
+**[shubhojit82.github.io/shubhojit82/docs/](https://shubhojit82.github.io/shubhojit82/docs/)**
 
 ---
 
-## GitHub Pages & portfolio
+## 📌 About
 
-I added a responsive portfolio site under `/docs` in this repository. To publish it as a GitHub Pages site:
+19+ years of enterprise technology experience designing and delivering mission-critical platforms for Fortune 500 organizations across telecom, media & advertising, grocery retail, and travel in the United States.
 
-1. Go to this repo → Settings → Pages.
-2. Under "Source", select: Branch = `main`, Folder = `/docs`, then Save.
-3. Wait ~1–5 minutes; the site will be served at:
-   https://shubhojit82.github.io/shubhojit82
+Core expertise spans:
 
-If you want a downloadable resume added, paste a URL for your resume PDF and I will commit it to `/docs` and add a download link to the site.
+- **Governed AI** — IBM watsonx agentic architecture, AI content supply chains, responsible AI controls
+- **Adobe Experience Cloud** — AEM Sites/Assets, AEP/RTCDP, Adobe Target, Workfront, Fusion
+- **Enterprise Commerce** — IBM WebSphere Commerce, SAP Hybris, composable-commerce reference architecture
+- **Enterprise Integration** — Middleware, event-driven architecture, BFF patterns, API gateway design
+- **Cloud-Native Architecture** — Kubernetes, DevOps, hybrid cloud, infrastructure-as-code
+
+---
+
+## 🗂 Repository Contents
+
+| Path | Description |
+|------|-------------|
+| `docs/index.html` | Main portfolio — all sections, experience, awards, projects |
+| `docs/styles.css` | Design system — variables, layout, components, responsive |
+| `docs/script.js` | Client JS — scroll-reveal, counters, booking form, navigation |
+| `docs/appsscript.gs` | Google Apps Script — booking backend (deploy separately) |
+| `docs/robots.txt` | Search engine directives |
+| `docs/sitemap.xml` | XML sitemap |
+| `docs/data/` | Structured JSON content files (profile, recognition, community, etc.) |
+| `AUDIT_REPORT.md` | Site audit with priority matrix |
+| `CONTENT_GAPS.md` | Structured content gaps tracker |
+| `EVIDENCE_MODEL.md` | Evidence classification schema |
+
+---
+
+## 🔗 Profiles
+
+| Platform | Link |
+|----------|------|
+| LinkedIn | [linkedin.com/in/shubhojitchowdhury](https://www.linkedin.com/in/shubhojitchowdhury) |
+| GitHub | [github.com/shubhojit82](https://github.com/shubhojit82) |
+| ORCID | [orcid.org/0009-0001-5158-3125](https://orcid.org/0009-0001-5158-3125) |
+| Google Scholar | [scholar.google.com](https://scholar.google.com/citations?user=BaZX168AAAAJ&hl=en) |
+| ResearchGate | [researchgate.net/profile/Shubhojit-Chowdhury](https://www.researchgate.net/profile/Shubhojit-Chowdhury) |
+| IEEE | Active member |
+
+---
+
+## 🚀 Public Projects
+
+| Repo | Stack | Description |
+|------|-------|-------------|
+| [nabc-2026](https://github.com/shubhojit82/nabc-2026) | PHP | NABC 2026 event / organization site |
+| [AIAssistant](https://github.com/shubhojit82/AIAssistant) | Python / GPT-4 | Conversational AI assistant reference |
+| [edge-delivery](https://github.com/shubhojit82/edge-delivery) | JavaScript / AEM | Adobe Edge Delivery Services reference |
+| [hackathon2021](https://github.com/shubhojit82/hackathon2021) | Java / Spring Boot | Hackathon 2021 entry |
+| [trainingGHA](https://github.com/shubhojit82/trainingGHA) | GitHub Actions YAML | GHA workflow training examples |
+| [JENKINS](https://github.com/shubhojit82/JENKINS) | Docker / Jenkins | Jenkins pipeline Docker reference |
+
+---
+
+## 🏅 Selected Recognition
+
+- **IBM GBS GD Top Contributor Award** — Client delivery excellence
+- **IBM Eminence & Excellence Recognition** — Enterprise architecture leadership
+- **2026 Claro Awards for Technology Excellence** — Invited industry judge *(evaluation in progress)*
+- **Adobe Certified Master** — Experience Manager / Experience Cloud (25+ badges)
+- **IEEE Active Member** — 1-Year Milestone (Credly verified)
+- **MoMA Digital Transformation** — Project architect recognition
+
+---
+
+## 🤝 Community & Nonprofit
+
+- **Sreeshti** — President, Bengali cultural nonprofit (NJ)
+- **48in48** — Web development volunteer, nonprofit website builds
+- **CAB (Community Advisory Board)** — Member
+- **Anandamandir / Kallol** — Community engagement
+
+---
+
+## ⚙️ Booking Backend Setup
+
+The booking form (`#book` section) posts to a Google Apps Script web app.
+
+1. Open [script.google.com](https://script.google.com), create a new project
+2. Paste the contents of `docs/appsscript.gs`
+3. **Deploy → New deployment → Web app**  
+   - Execute as: *Me*  
+   - Who has access: *Anyone*
+4. Copy the Web App URL
+5. Replace `APPS_SCRIPT_URL` in `docs/script.js` with your URL
+
+---
+
+## 📄 License
+
+Content and design © Shubhojit Chowdhury. All rights reserved.  
+Code structure (HTML/CSS/JS scaffold) may be referenced for personal portfolio use with attribution.

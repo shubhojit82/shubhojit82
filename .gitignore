@@ -1,0 +1,19 @@
+# ── OS / editor artefacts ───────────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ── Node (if tooling is ever added) ────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ── Private evidence — NEVER commit ────────────────────────────
+# Place award certificates, client letters, internal docs, and
+# any other private evidence artifacts inside private-evidence/.
+# This directory must never appear in a public commit.
+private-evidence/
+
+# ── Draft / local content files ────────────────────────────────
+*.draft.md
+*.local.md

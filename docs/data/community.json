@@ -1,0 +1,58 @@
+{
+  "_meta": "Community leadership and nonprofit engagement data. Update roles and years as content becomes available.",
+  "nonprofits": [
+    {
+      "id": "sreeshti",
+      "name": "Sreeshti",
+      "role": "President",
+      "type": "Bengali cultural nonprofit",
+      "location": "New Jersey",
+      "status": "Active",
+      "description": "[PLACEHOLDER: add org description, founding year, scope of role, and any public URL]",
+      "url": "[PLACEHOLDER]"
+    },
+    {
+      "id": "48in48",
+      "name": "48in48",
+      "role": "Web Development Volunteer",
+      "type": "Nonprofit website builds",
+      "location": "Remote",
+      "status": "Active",
+      "description": "Volunteer web developer building pro-bono websites for nonprofits during 48-hour events. 48in48 is a global nonprofit that builds 48 websites for 48 nonprofits in 48 hours.",
+      "url": "https://48in48.org"
+    },
+    {
+      "id": "cab",
+      "name": "CAB — Community Advisory Board",
+      "role": "Member",
+      "type": "Advisory",
+      "location": "[PLACEHOLDER: confirm location/org]",
+      "status": "Active",
+      "description": "[PLACEHOLDER: add board description and scope]",
+      "url": "[PLACEHOLDER]"
+    },
+    {
+      "id": "anandamandir-kallol",
+      "name": "Anandamandir / Kallol",
+      "role": "Community Engagement",
+      "type": "Cultural / Community",
+      "location": "New Jersey",
+      "status": "Active",
+      "description": "[PLACEHOLDER: add description of role and engagement]",
+      "url": "[PLACEHOLDER]"
+    }
+  ],
+  "judging": [
+    {
+      "id": "claro-2026",
+      "body": "Claro Awards for Technology Excellence",
+      "role": "Judge",
+      "year": "2026",
+      "status": "Invitation accepted · Evaluation in progress",
+      "category": "Technology Excellence",
+      "geography": "United States",
+      "evidence": "LinkedIn post · 45 reactions",
+      "evidence_url": "[PLACEHOLDER: add LinkedIn post URL]"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "_meta": "Testimonials data. Only include testimonials with explicit permission from the recommender.",
+  "testimonials": [
+    {
+      "id": "rahul-nair-ibm",
+      "name": "Rahul Nair",
+      "title": "[PLACEHOLDER: confirm title]",
+      "org": "IBM",
+      "relationship": "Colleague",
+      "quote": "[PLACEHOLDER: add quote text — obtain permission to use publicly]",
+      "linkedin_url": "[PLACEHOLDER: add LinkedIn recommendation URL if public]",
+      "verified": true,
+      "verification_note": "IBM colleague — LinkedIn recommendation"
+    },
+    {
+      "id": "greg-williams-hertz",
+      "name": "Greg Williams MBA",
+      "title": "[PLACEHOLDER: confirm title]",
+      "org": "Hertz",
+      "relationship": "Client",
+      "quote": "[PLACEHOLDER: add quote text — obtain permission to use publicly]",
+      "linkedin_url": "[PLACEHOLDER: add LinkedIn recommendation URL if public]",
+      "verified": true,
+      "verification_note": "Hertz client — LinkedIn recommendation"
+    }
+  ],
+  "linkedin_recommendations_count": 9,
+  "linkedin_profile_url": "https://www.linkedin.com/in/shubhojitchowdhury"
+}
